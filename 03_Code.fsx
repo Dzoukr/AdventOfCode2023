@@ -1,7 +1,8 @@
-﻿open System
-open System.IO
+﻿#load "InputReader.fsx"
 
-let input = File.ReadAllLines @"03_Input.txt"
+open System
+
+let input = InputReader.read "03"
 
 let isSymbol (c:char) =
     Char.IsNumber(c) |> not

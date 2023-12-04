@@ -1,6 +1,6 @@
-﻿open System.IO
+﻿#load "InputReader.fsx"
 
-let input = File.ReadAllLines @"02_Input.txt"
+let input = InputReader.read "02"
 
 type Color =
     | Red
