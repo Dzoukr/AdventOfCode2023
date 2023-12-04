@@ -25,10 +25,7 @@ let getWinningNumbers (c:Card) =
 
 let calculatePoints (c:Card) =
     let wins = c |> getWinningNumbers
-    match wins.Length with
-    | 0 -> 0
-    | 1 -> 1
-    | _ -> wins.Tail |> List.fold (fun acc _ -> acc * 2) 1
+    Math.Pow(2., (float wins.Length) - 1.) |> int
 
 let cards =
     input
