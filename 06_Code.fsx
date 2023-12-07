@@ -4,10 +4,6 @@ open System
 
 let input = InputReader.read "06"
 
-let txt = """
-Time:      7  15   30
-Distance:  9  40  200""".Split("\n", StringSplitOptions.RemoveEmptyEntries ||| StringSplitOptions.TrimEntries)
-
 type Race = {
     Time : int64
     Distance : int64
